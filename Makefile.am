@@ -35,7 +35,13 @@ LAYOUT_FILES =	\
 	css/ie-overrides.css	\
 	css/web-layout.css	\
 	css/xhtml11-quirks.css	\
-	css/xhtml11.css
+	css/xhtml11.css	\
+ css/bootstrap-theme.css	\
+	css/bootstrap-theme.css.map	\
+	css/bootstrap-theme.min.css	\
+	css/bootstrap.css	\
+	css/bootstrap.css.map	\
+	css/bootstrap.min.css
 
 SCRIPT_FILES =	\
 	scripts/asciidoc.js	\
