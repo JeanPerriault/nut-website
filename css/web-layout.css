@@ -1,3 +1,4 @@
+/*
 body {
   margin: 0;
   font-size: 0.9em;
@@ -127,8 +128,10 @@ td#driver-col { width: 30%; }
 .red { background-color: #ffa4a4; }
 
 .hidden { display: none; }
+*/
 
 /* HCL Chooser/Legend */
+/*
 #filters-set {
   display: none;
   border: 1px solid silver;
@@ -146,8 +149,10 @@ td#driver-col { width: 30%; }
 #filters-set select {
   max-width: 200px;
 }
+*/
 
 /* Clear HCL Legend */
+/*
 #filters-set + * {
   clear: both;
 }
@@ -213,15 +218,19 @@ td#driver-col { width: 30%; }
   width: 85%;
   float: left;
 }
+*/
 
 /*.support-level-descr { margin-left: 20px; float: right; }*/
 
 /* Remove text underscores on href */
+/*
 div#footer-badges a:link, #layout-menu a:visited, #layout-menu a:hover {
   text-decoration: none;
 }
+*/
 
 /* DDL */
+/*
 span.nut-ddl-bad-command,
 span.nut-ddl-bad-var {
   border-bottom: .2em solid red;
@@ -256,3 +265,4 @@ span.nut-ddl-bad-var-text-example {
   border-left: .2em dotted red;
   padding-left: .2em;
 }
+*/

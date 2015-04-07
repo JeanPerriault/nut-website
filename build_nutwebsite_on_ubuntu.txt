@@ -1,0 +1,149 @@
+How to build nut-website on ubuntu 14.04
+========================================
+
+1) Prerequisites
+Create a fork of https://github.com/networkupstools/nut-website.git from github.com
+
+2) Install build dependencies
+$ sudo apt-get update
+$ sudo apt-get install build-essential checkinstall autoconf libtool git-core
+/!\ This step is very long especially when it comes to download asciidoc, which has lots of dependencies
+$ sudo apt-get install asciidoc
+$ sudo apt-get install libusb-dev
+$ sudo apt-get install snmp libsnmp-base libsnmp-dev
+$ sudo apt-get install libneon libneon27
+/!\ Those 2 ones doesn't seem useful, no progress in configuration summary
+$ sudo apt-get install libavahi-common-dev
+$ sudo apt-get install libfreeipmi-dev
+
+3) Install apache to test website locally
+$ sudo apt-get apache2
+Your content should be move in /var/www/html/
+You can create a dedicated folder by typing:
+$ sudo mkdir /var/www/html/nut-website
+
+4) Clone Fork repo
+$ git clone https://github.com/JeanPerriault/nut-website.git
+
+5) Add remote repo for sync
+$ git remote add upstream https://github.com/networkupstools/nut-website.git
+
+6) Sync fork with main upstream
+$ git fetch upstream
+$ git checkout master
+$ git merge upstream/master
+
+7) Create branch
+$ git branch new_branch
+
+8) Make your changes
+Modify web-layout.conf and Makefile to modify web template and add css and script files
+
+9) Commit
+$ git commit -m "commit message"
+
+10) Nut Build steps
+$ ./autogen.sh
+$ ./configure
+$ make
+
+11) Check results
+Then check output folder containing website, you can copy it to /var/apache2/www/nut-website and check result at http://localhost/nut-website/
+$ sudo cp -R output/* /var/www/html/nut-website/
+
+
+
+
+REM1: During ./autogen.sh, nut and nut-dll are cloned locally, it takes lot of time. Can't we get ride of this?
+=> Note that the second time (if needed) you launch autogen script, it goes much more faster
+
+REM2: At the end of configuration, I have this listing:
+> Configuration summary:
+> ======================
+> build serial drivers: yes
+> build USB drivers: yes
+> build SNMP drivers: yes
+> build neon based XML driver: yes
+> enable Avahi support: no
+> build Powerman PDU client driver: no
+> build IPMI driver: no
+> build Mac OS X meta-driver: no
+> build i2c based drivers: no
+> enable SSL support: yes (OpenSSL)
+> enable libwrap (tcp-wrappers) support: yes
+> enable libltdl (Libtool dlopen abstraction) support: yes
+> build nut-scanner: yes
+> build CGI programs: no
+> build and install documentation: no
+> build and install the development files: no
+=> Why build and install documentation and development files are not available?
+
+REM3: When it comes to test website, the make process is definetely too long and should not be needed,
+=> Can't we just stubbed it so that we use 'fake' content during tests?
+
+
+
+
+
+
+
+
+
+
+
+./autogen.sh
+After clone:
+Second use: 28 seconds
+
+./configure
+After clone:
+Second use: 45 seconds
+
+There is a missing ups_data.js scripts required in Makefile.am, but this file doesn't exist.
+
+
+
+
+
+
+
+
+
+
+
+
+make[1]: Leaving directory `/home/jean/Workspace/nut-website/nut/data'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ImportError: No module named simplejson
+----------------------------------------------------------------------
+Warning: either Python, or a required module (json, simplejson, lxml)
+is not available.
+Skipping the HTML and JSON formated HCL tables regeneration.
+----------------------------------------------------------------------
+sudo apt-get install python-simplejson (this command also installs libjs-jquery)
+
+
+
+
+
+
+
+
+
+
+Put all Javascript links at the end of document so that pages load faster
+
+
+
+
+
+
+
+
+
+
+Check Makefile rules + generation -without all
+- http://www.networkupstools.org/devdumps/
+- http://www.networkupstools.org/docs/developer-guide.chunked/
+

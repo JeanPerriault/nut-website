@@ -29,19 +29,39 @@ CABLE_IMAGE_FILES =	\
 
 FAVICON_FILES =	\
 	faviconut.ico	\
-	faviconut.png
+	faviconut.png	\
+	apple-touch-iconut.png
 
 LAYOUT_FILES =	\
 	css/ie-overrides.css	\
 	css/web-layout.css	\
 	css/xhtml11-quirks.css	\
-	css/xhtml11.css
+	css/xhtml11.css		\
+	css/bootstrap-theme.css		\
+	css/bootstrap-theme.css.map	\
+	css/bootstrap-theme.min.css	\
+	css/bootstrap.css	\
+	css/bootstrap.css.map	\
+	css/bootstrap.min.css	\
+	css/dashboard.css
+
+FONT_FILES =	\
+	fonts/glyphicons-halflings-regular.eot	\
+	fonts/glyphicons-halflings-regular.svg	\
+	fonts/glyphicons-halflings-regular.ttf	\
+	fonts/glyphicons-halflings-regular.woff
 
 SCRIPT_FILES =	\
 	scripts/asciidoc.js	\
 	scripts/filter_png.js	\
 	scripts/jquery.js	\
-	scripts/nut_jquery.js
+	scripts/nut_jquery.js	\
+	scripts/bootstrap.js	\
+	scripts/bootstrap.min.js	\
+	scripts/npm.js	\
+	scripts/ie-emulation-modes-warning.js	\
+	scripts/ie10-viewport-bug-workaround.js	\
+	scripts/ie8-responsive-file-warning.js
 
 WEBSITE_FILES =	\
 	acknowledgements.html	\
