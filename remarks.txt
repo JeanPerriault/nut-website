@@ -1,0 +1,48 @@
+
+REM1: There is a missing ups_data.js scripts required in Makefile.am, but this file doesn't exist.
+
+REM2: During ./autogen.sh, nut and nut-dll are cloned locally, it takes lot of time. Can't we get ride of this?
+=> Note that the second time (if needed) you launch autogen script, it goes much more faster
+
+REM3: At the end of configuration, I have this listing:
+> Configuration summary:
+> ======================
+> build serial drivers: yes
+> build USB drivers: yes
+> build SNMP drivers: yes
+> build neon based XML driver: yes
+> enable Avahi support: no
+> build Powerman PDU client driver: no
+> build IPMI driver: no
+> build Mac OS X meta-driver: no
+> build i2c based drivers: no
+> enable SSL support: yes (OpenSSL)
+> enable libwrap (tcp-wrappers) support: yes
+> enable libltdl (Libtool dlopen abstraction) support: yes
+> build nut-scanner: yes
+> build CGI programs: no
+> build and install documentation: no
+> build and install the development files: no
+=> Why build and install documentation and development files are not available?
+
+REM4: When it comes to test website, the make process is definetely too long and should not be needed,
+=> Can't we just stubbed it so that we use 'fake' content during tests?
+
+./autogen.sh
+After clone:
+Second use: 28 seconds
+
+./configure
+After clone:
+Second use: 45 seconds
+
+REM5:
+=> Could we put all Javascript links at the end of document so that pages load faster
+
+
+
+
+NOTE1:
+Check Makefile rules + generation -without all
+- http://www.networkupstools.org/devdumps/
+- http://www.networkupstools.org/docs/developer-guide.chunked/
