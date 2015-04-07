@@ -200,6 +200,12 @@ var NUT = {
 
 		}
 
+    $('.nav li').click(function() {
+//alert($(this));
+        $(this).siblings('li').removeClass('active');
+        $(this).addClass('active');
+    });
+
 	},
 
 	// Initialize filter filters references

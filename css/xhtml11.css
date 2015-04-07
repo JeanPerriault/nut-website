@@ -1,3 +1,9 @@
+img.left{
+  float: left;
+  padding-top: 13px;
+  padding-right: 10px;
+}
+
 /* Debug borders */
 /*
 p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
@@ -85,11 +91,11 @@ span#email {
 span#revnumber, span#revdate, span#revremark {
   font-family: sans-serif;
 }
-
+*/
 div#footer {
   font-family: sans-serif;
   font-size: small;
-  border-top: 2px solid silver;
+  border-top: 1px solid #eee;
   padding-top: 0.5em;
   margin-top: 4.0em;
 }
@@ -116,7 +122,7 @@ div.admonitionblock {
   margin-top: 2.5em;
   margin-bottom: 2.5em;
 }
-*/
+
 /*
 div.content { */
 /* Block element content. */
@@ -184,7 +190,7 @@ div.verseblock > div.attribution {
 */
 
 /* DEPRECATED: Pre version 8.2.7 verse style literal block. */
-/*
+
 div.verseblock + div.attribution {
   text-align: left;
 }
@@ -267,10 +273,10 @@ td > div.verse {
 p.table {
   margin-top: 0;
 }
-*/
+
 
 /* Because the table frame attribute is overriden by CSS in most browsers. */
-/*
+
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -315,7 +321,7 @@ div.hdlist.compact tr {
 @media print {
   div#footer-badges { display: none; }
 }
-
+/*
 div#toctitle {
   color: #527bbd;
   font-family: sans-serif;
@@ -324,7 +330,7 @@ div#toctitle {
   margin-top: 1.0em;
   margin-bottom: 0.1em;
 }
-
+*/
 div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
@@ -341,4 +347,3 @@ div.toclevel4 {
   margin-left: 6em;
   font-size: 0.9em;
 }
-*/

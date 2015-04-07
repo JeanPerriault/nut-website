@@ -33,3 +33,37 @@ which position and size the layout.
 #emphasizedwords=(?u)\\?\bNetwork UPS Tools\b
 #monospacedwords=(?u)\\?\basciidoc\(1\) (?u)\\?\ba2x\(1\)
 
+
+
+How to play with nut-website
+==============================
+
+
+How to generate nut-website
+---------------------------
+
+Type the following commands (be aware it can take some time at first built)
+
+$ ./autogen.sh
+$ ./configure
+$ make
+
+Then check the output folder generated, and send its content to a local web
+server to see results
+
+
+
+How to implement changes
+------------------------
+
+1) A first idea is to modify directly the code sent on Webserver. You can modify
+files and check changes locally as you would do for a statical website.
+
+2) The deeper step is to check the source code
+Main entry point would be web-layout.conf, the website canvas: it defines all
+website commons parts, that will be integrated in all pages.
+
+3)
+
+
+Questions:
