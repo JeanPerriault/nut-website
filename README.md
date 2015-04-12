@@ -17,7 +17,9 @@ Today this is a three division CSS based layout
 * #layout-menu
 * #layout-content
 Simulated frames using CSS (fixed banner and menu, scrolling content).
+
 > This layout does not work with IE6.
+
 > It should evolve soon to a more adaptative layout.
 
 Each of the three divisions is enclosed in a same-named *-box division which position and size the layout.
