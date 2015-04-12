@@ -1,38 +1,34 @@
 # nut-website project
 
-The primary goal of the Network UPS Tools (NUT) project is to provide support for Power Devices, such as Uninterruptible Power Supplies, Power Distribution
-Units and Solar Controllers.
+As a reminder, the primary goal of the Network UPS Tools (NUT) project is to provide support for Power Devices, such as Uninterruptible Power Supplies, Power Distribution Units and Solar Controllers.
+This project is the dedicated to NUT website automtic generation.
 
+## Table of contents
+
+* [Overview](#overview)
+* [How to play with nut-website](#how-to-play-with-nut-website)
+  * [How to generate nut-website](#how-to-generate-nut-website)
+  * [How to implement changes](#how-to-implement-changes)
+
+## Overview
 Network UPS Tools website layout is based on AsciiDoc's.
 Today this is a three division CSS based layout
-> It should evolve soon to a more adaptative layout.
-
+* #layout-banner
+* #layout-menu
+* #layout-content
 Simulated frames using CSS (fixed banner and menu, scrolling content).
-NOTE: This layout does not work with IE6.
-
-+-----------------------------------------------------+
-|          #layout-banner                             |
-+--------------+--------------------------------------+
-|              |                                      |
-|              |                                      |
-| #layout-menu |          #layout-content             |
-|              |                                      |
-|              |                                      |
-|              |                                      |
-+--------------+--------------------------------------+
+> This layout does not work with IE6.
+> It should evolve soon to a more adaptative layout.
 
 Each of the three divisions is enclosed in a same-named *-box division which position and size the layout.
 * The #layout-content division is a container for AsciiDoc page documents.
 * Documents rendered in the #layout-content use the standard AsciiDoc xhtml11 backend stylesheets.
 
 [specialwords]
-#emphasizedwords=(?u)\\?\bNetwork UPS Tools\b
-#monospacedwords=(?u)\\?\basciidoc\(1\) (?u)\\?\ba2x\(1\)
-
-
+* #emphasizedwords=(?u)\\?\bNetwork UPS Tools\b
+* #monospacedwords=(?u)\\?\basciidoc\(1\) (?u)\\?\ba2x\(1\)
 
 ## How to play with nut-website
-
 
 ### How to generate nut-website
 
