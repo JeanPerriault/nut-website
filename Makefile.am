@@ -12,6 +12,7 @@ IMAGE_FILES =	\
 	images/hostedby.png	\
 	images/note.png	\
 	images/nut-logo.png	\
+	images/nut-logo-30.png	\
 	images/simple.png	\
 	images/warning.png
 
